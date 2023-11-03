@@ -112,6 +112,7 @@ function array_to_list(A) {
     return L;
 }
 
+//acc function but on array instead of list
 function accumulate_array(op, init, A) {
     let k = 0;
     let result = op(init, A[k]);
@@ -184,6 +185,9 @@ function flatten_array(array){
     }
     return helper(array, []);
 }
+flatten_array(list(list(1,2), list(2,3), list(3,4)));
+
+
 
 function get_index(A,element){
     function helper(A, element, counter){
