@@ -3,10 +3,12 @@
 /* -------------------------------------------------------------------------- */
 //TILL LINE 430
 
+//append one element to end of array, push() method
 function append_array(A, v) {
     A[array_length(A)] = v;
 }
 
+//append COPY of array not ori array
 function append_array_copy(A, B) {
     A = copy_array(A);
     for (let i = 0; i < array_length(B); i = i + 1) {
@@ -15,6 +17,7 @@ function append_array_copy(A, B) {
     return A;
 }
 
+//append actl array to end 
 function combine_array(A,B){
     let lenA = array_length(A);
     let lenB = array_length(B);
@@ -25,6 +28,7 @@ function combine_array(A,B){
     return A;
 }
 
+//check if element is in array, stops when you hit first case
 function in_array(array,element){
     let true_or_false = false;
     const len = array_length(array);
@@ -36,7 +40,7 @@ function in_array(array,element){
     return true_or_false;
 }
 
-
+//swap 2 elements of an array A
 function swap(A, i, j) {
     const temp = A[i];
     A[i] = A[j];
@@ -51,7 +55,7 @@ function reverse_array(A) {
     }
     return A;
 }
-
+//returns new array from and incl 'i'th element to and incl 'j'th element
 function slice_array(A, i, j) {
     const new_A = [];
 
@@ -71,6 +75,7 @@ function copy_array(A) {
     return B;
 }
 
+//look for elem in array
 function linear_search(A, v) {
     const len = array_length(A);
     let i = 0;
@@ -80,6 +85,7 @@ function linear_search(A, v) {
     return i < len;
 }
 
+//look for elem in sorted array
 function binary_search(A, v) {
     let low = 0;
     let high = array_length(A) - 1;
